@@ -30,6 +30,7 @@ Asynchronous replication is used more widely.
     - Determine the leader has failed
     - Choose a new leader. The follower with the most upto date data becomes the new leader.
     - Reconfigure the system to use the new leader. 
+- *Downside*: Clients can't write to the database if it cannot connect to the leader or if the leader is down for some reason.
 
 ### Replication Methods
 - *Statement based replication*<br>
@@ -57,13 +58,54 @@ After users have seen the data at one point in time, they shouldn’t later see 
 Users should see the data in a state that makes causal sense: for example, seeing a question and its reply in the correct order.
 
 
-## Multi leader replication
+## Multi leader Replication
 
 - Allow more than one node to accept writes. That node should forward that data change to all the other nodes.
-- Multi data centers, with a leader in each data center.
+- Applicable for Multi data centers, with a leader in each data center.
 - Applicable for clients(such as mobile phones) with offline operations, where the local database also becomes one of the leaders.
 - Applicable for real time collaborative editing such as Google Docs.
 - *Downside*: Same data may be concurrently modified in two different datacenters, and those write conflicts must be resolved.
+
+### Handling Write Conflicts
+
+- Write conflicts are the biggest problems in Multi leader replication
+- Requests from a particular can be sent to the same leader all the time
+- *Convergent conflict resolution*: All replicas must arrive at the same state after all changes are replicated
+- Conflict resolution is transferred to the application and triggered on reads or on writes.
+- A *replication topology* describes the paths in which the writes are replicated from one node to another:
+    - Circular - one leader forwards writes to one other node
+    - Star - writes are replicated to one designated root node.
+    - All to all - Every leaders sends writes to every leader
+
+## Leaderless Replication
+
+- This kind of database is also known as *Dynamo-style*.
+- Provides high availability and low latency, but can have occasional staleness.
+- Two common approaches -
+    - clients send writes to several replicas
+    - clients send writes to a coordinator node
+- Read requests are also sent to several nodes in parallel and the data with the latest timestamp or version is accepted.
+- **Read repair**<br>
+When a client knows it has received a stale value from one of the replicas, it writes the newer value to that replica.
+- **Anti-entropy process**<br>
+A background process copies data from one replica to another replica in case of any differences.
+- **Quorum**<br>
+    - When there are *n* replicas, every write must be confirmed by *w* replicas and we should query at least *r* replicas for each read to get an up-to-date value, then *w + r > n*.
+    - Read and write requests are sent to *n* replicas in parallel, the numbers *w* and *r* determine how many nodes we wait for.
+- Quorums can return stale values in the following cases -
+    - *Sloppy quorums*: write to available replicas, even if the designated replicas are not reachable. 
+    - Concurrents writes or concurrent reads + writes.
+- *Hinted handoff*: The sync between replicas once the replicas are reachable after a sloppy quorum is fixed. This provides high availability in sloppy quorums.
+- Applicable to multi datacenter replications, where a quorum is ensured within the local data center.
+- **Detecting concurrent writes*<br>
+    - *Last write wins(LWW)* - Each replica will store only the recent most value
+    - *Happens-before relationship* between writes
+    - *Concurrent operations* - Operations which do not know of other conflicting operations are called concurrent, even if they occur at different physical times.
+    - *Merge concurrent writes* - Merge concurrently written values
+    - *Version vectors* - Version number is maintained per replica per key. Version numbers collected from all other replicas is called a Version vector and is used to detemine which values need to be over written.
+
+
+
 
 
 
