@@ -100,7 +100,7 @@ A background process copies data from one replica to another replica in case of 
 - *Hinted handoff*: The sync between replicas once the replicas are reachable after a sloppy quorum is fixed. This provides high availability in sloppy quorums.
 - Applicable to multi datacenter replications, where a quorum is ensured within the local data center.
 
-### Detecting concurrent writes**<br>
+### Detecting concurrent writes
 - *Last write wins(LWW)* - Each replica will store only the recent most value
 - *Happens-before relationship* between writes
 - *Concurrent operations* - Operations which do not know of other conflicting operations are called concurrent, even if they occur at different physical times.
