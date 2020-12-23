@@ -55,7 +55,7 @@ Process to create a strategy -
 - Assess options, engage stakeholders and move towards decisions
 - Allocate resources and manage implementation
     - Focus investment
-    - Communicate clearyly
+    - Communicate clearly
     - Keep learning, keep adapting
 
 Five tests for strategy -
@@ -64,5 +64,8 @@ Five tests for strategy -
 - Trade-offs that enable differentiation from rivals
 - Strategic fit
 - Continuity over time
+
+## Getting great people on board
+
 
 
