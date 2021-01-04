@@ -115,7 +115,34 @@ Five elements-
         - As part of career development, ask your top talents to act on the cultural goals.
         - People exhibit the desired cultural behaviours when they see them to be rewarded and recognized.
 
-
+## Focusing on results
+- When the high performance and results are the only expected outcome, its makes the team and the leaders think and work differently and discover new opportunities which wouldn't have been the case otherwise.
+- Four elements the create a focus on results:
+    - Setting high performance goals
+        - the ability to establish high performance expectations may be the most universally underdeveloped leadership skill
+        - High performance is only possible when the expectations are ratcheted up
+    - Holding people accountable
+        - Evaluate people based on the results, not for effort. Otherwise it becomes acceptable to try hard and deliver only mediocre results.
+        - Help people overcome the barriers in their work
+    - Reducing organization complexity. Examples are-
+        - Organizational or Structural design that get in the way of getting things done
+        - Product proliferation
+        - Outdated processes
+        - Managerial behaviors that get in the way
+    - Building capabilities while growing results
+        - Most effective change in organizations comes from bottom up experiments in an iterative process
+        - Managers and their people learn new capabilities and experience success
+        - Spread the new approaches to others.
+    -  Maintaining organizational discipline
+        - Get the right metrics
+            - Are we focusing on the right questions
+            - Does our data tell a story
+            - Does our data help us to look ahead rather than behind
+            - Do we have a mix of quantitative and qualitative data
+        - Set an operational review cadence
+        - Lead a candid dialogue at operational reviews
+            - Ask tough and direct questions
+            - Ask questions that forces people to think differently+
 
 
 
