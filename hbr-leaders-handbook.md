@@ -144,6 +144,59 @@ Five elements-
             - Ask tough and direct questions
             - Ask questions that forces people to think differently+
 
+## Innovating for the future
+A culture of innovation increases the chance and sustained performance of an organization over time. There are two villains for a sustained business success-
+- External: Market shifts, New technologies and global economic shocks
+- Internal: Complacency, Inward focus and arrogance
+
+Its important to instill a sense of dissatisfaction of the status quo. Four elements for an organization to be focussed on innovation-
+- Balancing the present and the future
+- Getting ready for the future
+- Shaping the future
+- Building a future focussed culture
+
+### Building the present and future
+While its challenging, leaders must preserve and improve the current/core business and at the same time, create opportunities for growth. For doing so-
+- Create bandwidth to focus on the future
+- Take a portfolio approach to innovation
+
+### Getting ready for the future
+Prepare for the future in terms of resources and information about opportunities and threats to guide the idea generation and experimentation. Important facets of this-
+- Build current surplus to fund the future
+- Incremental innovation based on the current offerings(or its variations), by expanding them to new markets or putting them to use in new scenarios.
+- Free up resources(or cash) by destroying products or business units
+- Scan the horizon for breakthrough innovation. As a leader -
+    - Expand the awareness of new and ambitious possibilities, new technologies, new social or economic paradigms, cutting edge ideas in other industries
+    - Be bold and creative
+    - Engage with customers, partners, academic and industry experts
+    - Talk to people throughout your organization
+
+### Shaping the future
+Innovation should be an intentional approach to evolve the organization toward a significantly new value proposition and relationship with customers while learning and sharpening about the value proposition along the way.<br><br>
+**Disruptive Innovation**<br>
+A process by which a smaller competitors quietly develops a new business model and suddenly shifts the competitive dynamics of an entire industry and its well established companies.<br>
+The best approach towards protecting oneself from disruptive innovation is to develop disruptive ideas yourself. This is possible by setting up a separate team or a business unit focussed on just that.<br>
+Another approach to deal with disrupting innovation is to partner with such companies(or buy them).<br><br>
+**Lean Innovation**<br>
+Lean approach focuses on advancing, changing and discarding innovative ideas. The core of the approach is rapid experimentation with real customers on a smaller scale and getting feedback from them. This can help to confirm the idea, pivot to a better idea, reconfigure it or drop it altogether(a fail-fast approach).<br>
+Real innovation and sustained value is derived only from customers that are willing to buy the product or utilize the service and its important to engage with them upfront.<br><br>
+**Encourage controlled failure**<br>
+Failure is a necessary component of learning. If organizations don't try things(that have a higher chance of failure), they can never create new forms of value. Adopt the lean approach of experimentation and fail fast.<br><br>
+
+### Build a future focussed culture
+An innovative culture is where the employees are intellectually curious, open to change, resilient and flexible. They learn from failure and learn new ways of working. They are future oriented and think in the long term. Initiatives for building such a culture-
+- Building Innovation metrics
+- Appointing Innovation champions
+- Communication campaigns
+- Innovation workshops
+- Innovation fund
+- Innovation challenges
+- Innovation network across the company<br>
+As a leader of the organization, participate actively in these initiatives to spread the culture of innovation.
+
+
+
+
 
 
 
