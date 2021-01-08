@@ -194,6 +194,84 @@ An innovative culture is where the employees are intellectually curious, open to
 - Innovation network across the company<br>
 As a leader of the organization, participate actively in these initiatives to spread the culture of innovation.
 
+## Leading yourself
+
+To lead others successfully, you must lead yourself.  Four elements -
+- Knowing yourself
+- Growing yourself
+- Sharing yourself
+- Taking care of yourself
+
+### Knowing yourself
+Knowing yourself is fundamental to forming a vision for your organization that reflects your values and giving the right priority to the work you care about. Three areas of self knowledge-
+- Character 
+    - Purpose: Why do you do what you do ?
+    - Values: What are the principles and standards you aim to follow in working with other people.
+    - Aspirations: How high do you want to reach for success?
+    - Resilience: Great leaders learn from their failures and build capacity to recover and then reach higher the next time.
+- Personal style and habits
+    - What is my style and habits when I am most effective
+    - What is my style and habits when I am least effective
+    - How well do I handle relationships
+    - How should I best position myself to do the work
+- Authenticity
+    - Leaders should stay true to who they are and
+    - Keep learning and adapting to new and complex situations
+- Knowledge and skills
+    - Develop a list of knowledge and skills
+    - Assess what you have, what you lack and what you need to strengthen
+- Outside perspective
+    - Soliciting regular outside feedback is critical
+
+### Growing yourself
+Take the time to intentionally work on self improvement. Best leaders are intellectually curious and continually expand their horizons. Types of learning
+- Formal learning
+- On the job learning. Be more conscious about it. Two types -
+    - Stretch projects
+    - New responsibilities
+    - Its a continuous cycle of learning, taking action, observation, reflection of the results and why it worked(or not) and integrating it back into your habits to improve
+- Learn from failure - Take a step back, reflect on what happened, learn from the experience and move on
+- Learn from others(by watching and analysing them)
+- General learning principles
+    - Balance building on strengths and shoring up weaknesses
+    - Go beyond your comfort zone
+    - Be intellectually humble and listen, listen, listen
+    - Practice the traditional learning cycle
+    - Match the learning opportunity to the need and to your learning style
+    - Prefer learning and development that pertain to real work and your current challenges
+
+### Sharing yourself
+Your growth will also benefit from the contributing to the growth and welfare of others. Growing other leaders is an important strategy to increase the scale and performance of your organization. Guiding principles for sharing yourself -
+- Be selective, based on value
+- Be focused enough to have an impact
+- Diversify your sharing portfolio
+- Don't shy away from occasional open ended contribution
+
+### Taking care of yourself
+To be an effective leader, take care of yourself. Personal strategies can be -
+- Routinize common interactions
+- Partition your time at work
+- Partition your time outside work
+- Simplify and prioritize your decision making
+- Seek energy renewing work and activity
+- Understand your needs in the following domains and define your objectives for each of them and assess and improve over time-
+    - Personal health
+    - Relationships with Family
+    - Relationships with Friends
+    - Contributions to the community
+    - Achievements at work
+
+## Conclusion
+- Leadership matters. Big and important things happen only with great leadership.
+- Think big and bold and around the corners
+- Have the courage to let go
+- Inspire and demand high performance/results
+- Learn from your failures and be resilient
+- Create an organization of one mind
+
+
+
+
 
 
 
