@@ -9,5 +9,5 @@ Adopting a cloud strategy is like a change in lifestyle or moving to another cou
 - Compliance is transparent instead of being controlling
 
 <br>
-Digital transformation is not about making digital clones of offline processes. Its about redefining the whole business model by leveraging technology. Digital companies do not have the luxury of a well defined target state, they exist in a world of constant change
+Digital transformation is not about making digital clones of offline processes. Digital companies redefine the whole business model by leveraging technology. They do not have the luxury of a well defined target state, and exist in a world of constant change. Digital companies embrace economies of speed(by quick experimentation, learning and course correction) and not scale.
 
