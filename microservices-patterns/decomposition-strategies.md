@@ -34,7 +34,35 @@ Software elements are organized into layers -
 
 ## Defining a microservice
 
-This is a three step pr
+This is a three step process which is likely to iterative and creative -
+1. Identify system operations
+2. Identify the services
+3. Define service APIs and collaborations
+
+A **system operation** is an abstraction of a request that the application must handle. It’s either a command, which updates data, or a query, which retrieves data. <br>
+
+Services are based on business concepts and not, technical concepts. Two main strategies for decomposing services -
+1. define services corresponding to business strategies
+2. organize services around domain driven design sub-domains
+
+Obstacles to decomposition -
+- Network latency
+- Synchronous communication
+- Data consistency across services
+- God classes
+
+The domain model is derived primarily from the nouns of the user stories, and the system operations are derived mostly from the verbs. <br>
+An organization’s business capabilities are identified by analyzing the organization’s purpose, structure, and business processes. Each business capability can be thought of as a service, except it’s business-oriented rather than technical.<br>
+DDD has two main concepts used in the microservice architecture -
+- sub-domains - part of the domain. A domain is DDD's application's problem space.
+- bounded contexts - a service or a set of services
+
+Decomposition guidelines -
+- Single responsibilty principle
+- Common closure principle
+
+
+
 
 
 
