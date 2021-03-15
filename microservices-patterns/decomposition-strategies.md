@@ -60,12 +60,3 @@ DDD has two main concepts used in the microservice architecture -
 Decomposition guidelines -
 - Single responsibilty principle
 - Common closure principle
-
-
-
-
-
-
-
-
-
