@@ -93,6 +93,101 @@ Large enterprises include a team labeled "Enterprise Architecture" as part of th
 Developers code -> IT Engineers run software -> Product owners create new features<br>
 This loop should spin faster to create value at a fast rate. The EA should work outside the loop and create a two way connection between this loop and other stakeholders such as Business, Cloud Providers and IT Stakeholders.
 
+## Moving to the Cloud
+
+Reasons for moving to the cloud -
+- Cost - This can be an advantage only when the elastic pricing is used along with transparency and automation.
+- Uptime
+- Scalability
+- Performance
+- Velocity
+- Security
+- Insight
+- Transparency
+
+Organizations should take an application centric view on their cloud strategy, instead of a infrastructure point of view. The application centric view focuses on speeding up software delivery, through increased automation. Carrying the existing processes and systems into the cloud will get you another data center, but not a cloud and that doesn't make a mark.
+
+*Running other's software is a bad deal* due to the following reasons -
+- You pay for the hardware
+- Installation is cumbersome
+- If something breaks, you're guilty until proven innocent
+- You can't make changes when you need them
+The alternative is Software as a Service where the vendor runs the applications for you.
+
+Consider the following recurring themes in the cloud strategy -
+- Onboarding
+- Hybrid clouds
+- Virtual Private Cloud
+- Legacy or Monolithic Applications
+- Cost recovery
+
+NIST published a useful definition of cloud computing listed below -
+- On demand self-service
+- Broad network access
+- Resource pooling
+- Rapid Elasticity
+- Measured Service
+
+A few considerations for Enterprise Cloud -
+- Calibrate expectations - Carrying your enterprise baggage to the cloud won't transform anything
+- Bring the cloud to you - Bring elements of the cloud operating model to your environment
+- Measurable goals - Establish clear goals for the cloud migration and be clear why you are going to the cloud
+- Segmentation - Some parts of the applications can go straight to the cloud.
+
+### Phases of Cloud Migration
+
+**Planning and Staffing**<br>
+A checklist prior to the migration-
+- Size up the migration
+- Clarify the motivations and goals
+- Define success and metrics
+- Get stakeholder buy-in
+
+The following are the critical roles for a cloud migration -
+- Executive sponsor - who gets budgets and resources
+- Chief Architect - Mmkes key technology decisions and goals
+- Program Manager - handles communication and schedule
+
+Responsibilities of a Program Manager -
+- Keeping track of the migration schedule and deliverables
+- Applying influence where needed to get the execution going across various teams
+- Coordinating the flow of information between various parties
+- Publishing regular updates on the migration progress
+- Highlighting risks and important decision points to the executive sponsor and chief architect
+
+**Execution**<br>
+- Discovery - Gathering information about the existing environment
+- Automation and Federation 
+    - Automation involves building software to provision, deploy, and verify components in the new environment.
+    - Federated Execution - Greater responsibility to individual teams, giving them the freedom on how to deliver the migration outcomes. This won't work for teams don't manage their own infrastructure
+- Training - Teams should be sufficiently trained for the new environment
+
+**Validation**<br>
+Classification of validations -
+- Environment validation - stress test the environment whether it meets the performance and scale expectations
+- Cost validation - Benchmark the actual cost of operations against the projected cost
+- Business Goals validation - Validate business goals such as improved security, agility and availability
+
+### Plotting the Execution
+The migration can be done in two directions -
+- Up - This is same as modernizing the application 
+- Out - This is migrating the application or its components to the cloud
+
+The execution or migration should be a combination of both directions. The modernization can occur along multiple dimensions:
+- Platform(Iaas -> PaaS --> FaaS)
+- Structure(Monolith -> Microservices)
+- Deployment(Manual -> Automated)
+
+The decision model of bucketizing for applications -
+- Applications that you didn't build(commercial applications)
+- Applications that someone built for you(System integrations)
+- Applications built in-house
+
+Beware of proxy metrics such as number of applications  or servers migrated. Instead focus on metrics which indicate value. 
+
+
+
+
 
 
 
