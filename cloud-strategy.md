@@ -185,6 +185,104 @@ The decision model of bucketizing for applications -
 
 Beware of proxy metrics such as number of applications  or servers migrated. Instead focus on metrics which indicate value. 
 
+## Architecting the Cloud
+
+Difference between multi and hybrid cloud -
+- Multi: Running applications on more than one cloud
+- Hybrid: Running applications on the cloud and on premise as well and they interact between each other
+
+### Multicloud options
+
+- *Arbitrary*: Applications are deployed to more than one cloud for no real reason.
+- *Segmented*: Different clouds are used for different purposes.
+- *Choice*: Teams or Business Units have a choice of a cloud provider.
+- *Parallel*: Single applications are deployed to multiple clouds.
+- *Portable*: Applications are moved across clouds at will.
+
+Deploying the same application across mulitple clouds(Parallel) needs decoupling from the cloud's propreitary managed services-
+- Cloud specific functions are isolated from the application as pluggable modules.
+- Maintain separate branches of the application for each cloud provider.
+- Use open source components which are same across the cloud providers.
+- Use a Multi cloud abstraction framework which enables to develop once and deploy to any cloud.
+
+Do note that Hybrid is a required reality, whereas Multi cloud is a choice. Following are the ways to break down a system for a Hybrid cloud -
+- Application: Front Tier and Back 
+- Application: New Generation and Old
+- Application: Non critical and critical
+- Application: Dev/Staging Envinronments and Production
+- Data classification: Non Sensitive vs Sensitive
+- Data classification: Data backup vs Operational
+- Operational state: Disaster recover vs Business as usual 
+- Workload demand: Burst vs Steady
+
+### Hybrid Implementation strategies
+
+The On Premises is different in the following ways from the Cloud-
+- Scale
+- Custom hardware
+- Diversity
+- Bandwidth
+- Geographic reach
+- Physical access
+- Skills
+
+The following are some of the implementation strategies of a Hybrid cloud -
+- Define a shared abstraction layer - a uniform run-time and management layer across both environments
+- Replicating the cloud environment on your premises(such as AWS Outposts), with either a hardwareor software solution
+- Replicating your existing on-premises virtualization environment in the cloud, such as AWS VMWare Cloud
+- Building an interface layer on existing on-premises virtualization tools to make it compatible with the cloud management layer; aka control plane
+
+Additional considerations for a Hybrid cloud -
+- Identity and Access management
+- Monitoring
+- Deployment
+- Data synchronization
+
+### Avoiding Lock-ins
+- Lock-ins aren't binary. Its okay to be locked in to some things to some degree.
+- Lock-ins can be avoid with options, but they come at a cost
+
+Shades of Lock-in:
+- Vendor
+- Product
+- Version
+- Architecture
+- Platform
+- Skills
+- Legal
+- Mental
+
+The cost of reducing lock-ins comes in the following flavors:
+- Effort
+- Expense
+- Under utilization
+- Complexity
+- New Lock-ins
+
+*The architect’s job to dismantle the buzzwords, identify the real drivers, translate them into an economic/risk model, and then find the best spot for the given business context.*
+
+Cost of Lock-in = Chance of migration * Cost of migration -> This should be measured against the upfront investment required to avoid lock-in. 
+
+With respect to using open source software for avoiding lock-ins, the architects should be aware of the operational costs of the software and getting locked-in with that software which could also be heavily influenced by a vendor. Open source softwares unfortunately allow a lot of abstraction leaks to accommodate for vendor specific constructs.
+
+### Multi Tenancy
+Multitenant systems are designed to provide every tenant a dedicated share of a single system instance. The key benefit of such a multitenant system is the speed with which a new share or (logical) customer instance can be created. The key constraints that drive multi tenancy is -
+- deploying a new system(for a new tenant) is a complex and time consuming process
+- Each new system(for a tenant) will have its stack and needs monitoring
+
+The cloud removes these constraints and easily allows the creation of new systems/instances for every new tenant. This allows to shift to a simpler architecture which could be termed Multi-Single Tenancy. Here the system will exhibit the properties of multi tenancy, but internally will use different instances for different tenants. 
+
+### Disposability
+Servers aren't assets and they are a liability. They are expensive, consume a lot of energy and depreciate quickly. Automation allows us to setup new servers fast and easy through scripts which are checked in to source control. This enables us throw away these virtual servers and provision new ones whenever necessary.
+
+Benefits of disposability -
+- Consistency - All servers have the same configuration created from the source control, hence no *configuration drift*.
+- Transparency - The configuration of the servers are obtained by looking into the source control.
+- Less Stress - 
+
+
+
+
 
 
 
