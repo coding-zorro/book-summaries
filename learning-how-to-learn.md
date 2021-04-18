@@ -14,5 +14,27 @@
     - Use active recall
 - The brain is made of billions of neurons which forms links with each other through small electrical shocks. Learning and practicing makes these links stronger. The neurons are like a clay mold and new brain links can be formed. This is called neuroplasticity.
 - Metaphors help in the learning process because of *neural reuse theory* as the new learning will be based on brain links formed due to metophors, which we can easily connect with already.
+- The more you learn, practice and sleep, the more you grow new dendrites and synaptic links. Stronger links and more links. The dendrites and links start fading if we don't revisit(recall) the learning or if we don't practice regularly. Its also recommended to space out learning over multiple and continuous days for the dendrites to grow and strengthen during the sleep.
+- Two types of memory:
+    - Working memory:  deals with information that we have in our mind right now. *Focus* helps us to acquire and retain information longer in the working memory.
+    - Long term memory: The information in our brain which are stored long term. Each piece of information is a set of brain links. The long term memory can never be filled.
+- The long term memory has two parts:
+    - Semantic(Facts)
+    - Episodic(Pictures): Easier for the brain to store information in this format
+- Five tips for remembering things:
+    - Focus
+    - Practice
+    - Visualize
+    - Store it with an anchor(another thing you already know)
+    - Recall actively
+- Memory palace technique: Place things your want to remember in familiar locations or directions. Make the things silly and add some movement if possible. This helps in remembering because our brain is better with places and directions(visuo-spatial).
+- Other memory techniques:
+    - Make up songs
+    - Make up metaphors
+    - Take good notes(preferably hand written)
+    - Imagine you are the information that you are trying to remember
+    - Teach someone else or a rubber duck
+    - Associate numbers with well known shapes or characters
+
 
 
