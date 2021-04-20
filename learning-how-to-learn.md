@@ -35,6 +35,8 @@
     - Imagine you are the information that you are trying to remember
     - Teach someone else or a rubber duck
     - Associate numbers with well known shapes or characters
-
-
-
+- Brain links get stronger by practice and not just by understanding. Multiple brain links can be connected with each other as well.
+- *Cognitive load*: The mental effort to keep things in the working memory. When you are learning, your working memory can only hold so much. So its important to *focus* completely during learning.
+- The starting steps to learning can be hardest and becomes enjoyable only after gaining mastery(or creating the brain links). So start learning, be patient and keep working on it.
+- Hang out with people with interests you want to imbibe, that will help you have many more ideas.
+- Hippocampus is the part of the brain important for remembering facts and events and produces neurons to remember things. Exercise produces BDNF which keeps these neurons strong and healthy. Exercises is the food for your brain and helps in generating new ideas.
