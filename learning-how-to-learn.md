@@ -40,3 +40,11 @@
 - The starting steps to learning can be hardest and becomes enjoyable only after gaining mastery(or creating the brain links). So start learning, be patient and keep working on it.
 - Hang out with people with interests you want to imbibe, that will help you have many more ideas.
 - Hippocampus is the part of the brain important for remembering facts and events and produces neurons to remember things. Exercise produces BDNF which keeps these neurons strong and healthy. Exercises is the food for your brain and helps in generating new ideas.
+- Two ideas behind creating brain-links:
+    - Deliberate practice: Learning new and difficult things. *Lazy learning* is learning things that you know already.
+    - Interleaving: Practicing different aspects and techniques of a skill
+- Study in different places so that your brain does not fixate on a location when learning a specific thing
+- Use all your senses for learning - hearing, reading, seeing and feeling(if possible).
+- *Eat your frogs first*: Get started with the difficult or unpleasant things first.
+- Set a quitting time for your learning.
+- Think like a learning scientist of your own learning process. Find out what works and what doesn't. You can keep notes of when you did something well or when you didn't and find out what helped and what didn't help.
