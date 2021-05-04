@@ -48,3 +48,10 @@
 - *Eat your frogs first*: Get started with the difficult or unpleasant things first.
 - Set a quitting time for your learning.
 - Think like a learning scientist of your own learning process. Find out what works and what doesn't. You can keep notes of when you did something well or when you didn't and find out what helped and what didn't help.
+- If you have a poor working memory, that might enable you to learn more richly and deeply. It might make you more creative and also help you simplify topics more elegantly to be stored in your long term memory.
+- Its always better to take notes by hand as it helps to create the brain links better. Writing strengthens brain links.
+- It can be beneficial to learn other alternate subjects/skills as well as that will help you learn your main subjects/skills better.
+- Tips for better learning:
+    - Broaden your passions and learn about multiple things
+    - Be persistent with your learning and take breaks to use your diffuse mode effectively 
+    - When you make mistakes, admit it, correct it and flexibly change your mind.
