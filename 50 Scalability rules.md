@@ -1,95 +1,160 @@
+### **Chapter 1: Reduce the Equation**
 
-## **Simplicity & Design Principles**
-
-1. **Don’t Overengineer the Solution** — Keep systems as simple as possible. Complexity makes scaling, debugging, and maintaining much harder.
-2. **Design Scale into the Solution (D-I-D Process)** — Build scalability into the design early rather than retrofitting later. It’s much cheaper to plan for growth from day one.
-3. **Simplify the Solution Three Times Over** — After designing, look for unnecessary parts and cut them. Then repeat the exercise until only essentials remain.
-4. **Use the Right Tools** — Match technology to the problem instead of forcing one-size-fits-all. The wrong tool creates bottlenecks.
-5. **Be Competent** — Teams must understand both the business and the technology. Poor decisions often come from lack of knowledge.
-6. **Learn from Instinct and Measurement** — Data-driven metrics guide decisions. But don’t ignore team intuition and experience.
-7. **Always Prioritize Rules by Risk vs. Cost** — Not every rule matters equally. Focus on high-impact, low-cost improvements first.
-8. **Continuously Review and Refine the Rules** — Technology evolves, so rules need updates. Regular reviews keep practices relevant.
-9. **Use Rules as Organizational Standards** — These rules work best when adopted company-wide. Consistency builds scalable cultures.
-
----
-
-## Caching & Performance**
-
-10. **Use Caching Aggressively** — Cache results at every layer: browser, CDN, app, and DB. Fewer requests mean faster systems.
-11. **Cache Ajax Calls** — Many API responses don’t change often. Cache them to reduce server load and latency.
-12. **Cache Page Responses** — Full-page caching speeds up delivery dramatically. It’s especially effective for content that doesn’t change often.
-13. **Use External Cache Stores (e.g., Memcached, Redis)** — Keep cache outside your app servers. This makes it sharable and scalable.
-14. **Use Distributed Cache for State** — Shared caches like Redis scale better than in-memory sessions. They also allow failover.
-15. **Implement Expires and Cache-Control Headers** — Let browsers and CDNs cache intelligently. This cuts traffic back to your origin.
+1. **Don’t Overengineer the Solution**
+   Simplify architecture to make scaling, debugging, and maintenance easier. Avoid unnecessary complexity that slows you down.
+2. **Design Scale into the Solution (D-I-D Process)**
+   Build in scalability from the very beginning rather than retrofitting it later. It’s cost-effective and avoids awkward rearchitecting.
+3. **Simplify the Solution Three Times Over**
+   After creating an architecture, cut out redundancy or unnecessary components. Keep repeating this refinement until only essentials remain.
+4. **Reduce DNS Lookups**
+   Minimize DNS resolutions to cut latency per request. Reduce network overhead and speed up web page loads.
+5. **Reduce Objects Where Possible**
+   Too many files (images, scripts, styles) add overhead. Consolidate assets to reduce requests and improve performance.
+6. **Use Homogeneous Networks**
+   Stick with standard infrastructure across services. Consistency reduces complexity and failure modes.
 
 ---
 
-## **Application Architecture & Patterns**
+### **Chapter 2: Distribute Your Work**
 
-16. **Design to Clone or Replicate Things (X-axis)** — Add more identical nodes to share load. Cloning provides redundancy and increases throughput.
-17. **Design to Split Different Things (Y-axis)** — Break services by functionality. This isolates workloads and prevents one heavy service from overwhelming the whole system.
-18. **Use Scale Cube Axes Thoughtfully** — Clone (X), split by service (Y), or partition data (Z). Apply the right dimension for your problem.
-19. **Design Scale-Out Solutions, Not Scale-Up** — Use more machines instead of bigger ones. Horizontal scaling is cheaper and more resilient.
-20. **Avoid or Distribute State** — Stateless systems scale more easily. If state is necessary, spread it across multiple nodes.
-21. **Avoid Putting Systems in Series** — Don’t chain too many dependencies. Each extra step risks slowing or breaking the flow.
-22. **Relax Temporal Constraints** — Not everything needs to be real-time. Async processing eases pressure on systems.
-23. **Communicate Asynchronously** — Decouple producers and consumers using async messages. This makes the system more resilient to slowdowns.
-24. **Ensure You Can Wire On / Wire Off Features Dynamically** — Toggle features without redeploying. This reduces downtime and risk.
+7. **Design to Clone or Replicate Things (X-Axis)**
+   Scale by replicating the same service across multiple servers. Cloning ensures redundancy and helps balance traffic.
+8. **Design to Split Different Things (Y-Axis)**
+   Break up functions into isolated services (e.g., auth, billing, content). This separation prevents one slow service from affecting others.
+9. **Design to Split Similar Things (Z-Axis)**
+   Partition data or workload across segments (e.g., user vs. region). This reduces hotspots and scales horizontally further.
 
 ---
 
-## **Database & Storage**
+### **Chapter 3: Design to Scale Out Horizontally**
 
-25. **Don’t Duplicate Your Work** — Avoid recalculating or duplicating results unnecessarily. Reuse computations, cache them, or centralize logic.
-26. **Avoid Select \* Queries** — Pulling unnecessary fields wastes bandwidth and CPU. Always fetch only what you need.
-27. **Don’t Use Database Cursors** — Cursors hold locks and slow performance. Use pagination or batch queries instead.
-28. **Do Not Use Multiphase/Two-Phase Commits** — Distributed commits add latency and fragility. Favor eventual consistency when possible.
-29. **Use Appropriate Database Locks (Row, Page, Table)** — Match lock granularity to the workload. Too coarse locks block too much; too fine locks add overhead.
-30. **Segregate Program and Data** — Don’t mix application logic with data storage. This separation improves maintainability and resilience.
-31. **Be Careful with Costly Relationships** — Complex joins are expensive. Normalize carefully but denormalize where performance demands it.
-
----
-
-## **Messaging & Event Systems**
-
-32. **Ensure Message Buses Can Scale** — Design messaging systems to handle spikes. Otherwise, they become chokepoints.
-33. **Avoid Overcrowding the Message Bus** — Don’t flood the bus with unnecessary chatter. Group or filter events to keep throughput high.
+10. **Design Your Solution to Scale Out, Not Just Up**
+    Use many small machines rather than bigger expensive ones. Horizontal scaling is more cost-effective and resilient.
+11. **Use Commodity Systems (Goldfish Not Thoroughbreds)**
+    Choose inexpensive, reliable hardware over high-end specialized machines. It's more cost-efficient and easier to scale.
+12. **Scale Out Your Hosting Solution**
+    Don’t concentrate hosting; distribute across multiple servers or zones. This reduces risk and improves availability.
+13. **Design to Leverage the Cloud**
+    Take advantage of cloud elasticity for scaling resources up and down. It’s flexible and allows rapid adaptation to load changes.
 
 ---
 
-## **Failure & Resilience**
+### **Chapter 4: Use the Right Tools**
 
-34. **Learn Aggressively from Mistakes** — Treat every failure as an opportunity. Document lessons so they aren’t repeated.
-35. **Don’t Rely on QA to Find Mistakes** — Quality starts with developers. Automated tests and peer reviews prevent problems earlier.
-36. **Design for Rollback** — Assume some changes will fail in production. Always have a quick way to roll them back.
-37. **Discuss Failures — Don’t Blame** — Blameless postmortems help teams improve. Fear-driven cultures hide issues instead of fixing them.
-38. **Fail Fast—And Gracefully** — Detect failures quickly to avoid cascading problems. Always degrade in a way users can tolerate.
-39. **Avoid Single Points of Failure** — One failure should never bring everything down. Use redundancy and failover strategies.
-
----
-
-## **Networking & Delivery**
-
-40. **Reduce DNS Lookups** — Each DNS query adds latency. Minimize them to improve response times.
-41. **Reduce Objects Where Possible** — Too many assets (CSS, JS, images) slow the site. Consolidate or remove unnecessary ones.
-42. **Use Homogeneous Networks** — Standardize hardware and software across nodes. This reduces failure points and makes scaling predictable.
-43. **Design Scale into the Network Hardware** — Hardware should grow with load. Choose scalable load balancers, switches, and routers.
-44. **Be Wary of Scaling with Third Parties** — External providers may limit your scale. Design fallback strategies if they fail.
+14. **Use Databases Appropriately**
+    Apply the right database for the right use case (SQL, NoSQL, search, etc.). The wrong match creates performance and scalability burdens.
+15. **Firewalls, Firewalls Everywhere!**
+    Segment and protect each boundary with firewall rules. Multiple layers of security help contain failures and threats.
+16. **Actively Use Log Files**
+    Logs are more than record-keeping—they’re diagnostic gold. Monitor and analyze logs proactively to detect and respond to issues fast.
 
 ---
 
-## **Logging, Security & Ops**
+### **Chapter 5: Get Out of Your Own Way**
 
-45. **Firewalls Everywhere** — Assume every boundary needs protection. Multiple layers of defense reduce risk.
-46. **Actively Use Log Files** — Logs are not just for storage. Analyze them to detect issues early and improve performance.
-47. **Don’t Check What You Just Wrote** — Re-reading data right after writing wastes cycles. Trust your write unless there’s a real reason to verify.
+17. **Don’t Check Your Work**
+    Avoid verifying a write by immediately reading it back—it wastes resources. Trust the write operation unless absolutely necessary.
+18. **Stop Redirecting Traffic**
+    Unnecessary redirects add network hops and latency. Route requests directly for quicker responses.
+19. **Relax Temporal Constraints**
+    Don’t demand instant responses for non-critical tasks. Asynchronous processing can smooth out spikes and reduce load.
+
+---
+
+### **Chapter 6: Use Caching Aggressively**
+
+20. **Leverage Content Delivery Networks (CDNs)**
+    Offload assets to edge servers near users—CDNs reduce latency and server load.
+21. **Use Expires Headers**
+    Explicitly tell clients how long they can cache resources. This avoids repeated requests for unchanged content.
+22. **Cache Ajax Calls**
+    Many API responses are static or change infrequently—cache them to reduce server processing.
+23. **Leverage Page Caches**
+    Whole-page caching delivers repeated content instantly. Ideal for high-traffic, largely static pages.
+24. **Utilize Application Caches**
+    Cache computations or rendering inside the app layer to avoid reprocessing.
+25. **Make Use of Object Caches**
+    Store frequently accessed objects in a fast key-value store. This eliminates repeated complex object assembly.
+26. **Put Object Caches on Their Own “Tier”**
+    Isolate the cache layer (e.g., Redis cluster). Dedicated resources prevent cache pressure from impacting application performance.
 
 ---
 
-## **State Management**
+### **Chapter 7: Learn from Your Mistakes**
 
-48. **Avoid Session State on the Server** — Server sessions block horizontal scaling. Store state in the client or a shared service.
-49. **Use Browser-Stored State (e.g., Cookies, Local Storage)** — Push safe state management to the client. This reduces server overhead.
-50. **Use Distributed Cache for State** — Shared caches like Redis scale better than in-memory sessions. They also allow failover.
+27. **Learn Aggressively**
+    Treat failures as learning opportunities. Identify root causes and fix them fast.
+28. **Don’t Rely on QA to Find Mistakes**
+    Shift testing earlier in development. Preventing issues early saves time over post-production QA.
+29. **Failing to Design for Rollback Is Designing for Failure**
+    Plan for failure and rollback as first-class features. A solid rollback path prevents catastrophic updates.
 
 ---
+
+### **Chapter 8: Database Rules**
+
+30. **Remove Business Intelligence from Transaction Processing**
+    Don’t run heavy BI queries on transactional databases. Offload analytics to data warehouses.
+31. **Be Aware of Costly Relationships**
+    Deep relational queries and joins can be expensive. Model data to reduce relational complexity where practical.
+32. **Use the Right Type of Database Lock**
+    Granular locks (row-level vs. table-level) balance concurrency and consistency. Choose the right one for your workload.
+33. **Pass on Using Multiphase Commits**
+    Two-phase commits scale poorly in distributed systems. Opt for eventual consistency or simpler coordination.
+34. **Try Not to Use "Select for Update"**
+    Row-level locking stifles throughput. Use optimistic concurrency where possible.
+35. **Don’t Select Everything**
+    Only retrieve needed fields—not entire rows or objects. Minimizing data payload improves performance.
+
+---
+
+### **Chapter 9: Design for Fault Tolerance and Graceful Failure**
+
+36. **Design Using Fault-Isolative “Swim Lanes”**
+    Segment services to contain failure and protect unrelated components. Swim lanes limit blast radius.
+37. **Never Trust Single Points of Failure**
+    Replicate all critical components. Redundancy ensures resilience.
+38. **Avoid Putting Systems in Series**
+    Independent pipelines avoid bottlenecks; serial dependencies compound failure risk.
+39. **Ensure That You Can Wire On and Off Features**
+    Use feature toggles to enable or disable features dynamically. This lets you manage rollouts and faults gracefully.
+
+---
+
+### **Chapter 10: Avoid or Distribute State**
+
+40. **Strive for Statelessness**
+    Stateless services are easy to scale and recover. They treat each request independently.
+41. **Maintain Sessions in the Browser When Possible**
+    Offload session state to clients (e.g., via tokens). This avoids server memory and scalability issues.
+42. **Make Use of a Distributed Cache for States**
+    When sessions are needed server-side, store them in a distributed cache. Shared state survivors across restarts and scale-out.
+
+---
+
+### **Chapter 11: Asynchronous Communication and Message Buses**
+
+43. **Communicate Asynchronously as Much as Possible**
+    Async messaging decouples components and absorbs spikes. It instantaneously smooths load.
+44. **Ensure That Your Message Bus Can Scale**
+    Messaging systems should support growing load. Design for volume, latency, and redundancy.
+45. **Avoid Overcrowding Your Message Bus**
+    Don’t flood topics with unnecessary or verbose content. Filter and consolidate messaging for efficiency.
+
+---
+
+### **Chapter 12: Miscellaneous Rules**
+
+46. **Be Wary of Scaling through Third Parties**
+    External dependencies can bottleneck your scalability. Use fallback or caching to mitigate.
+47. **Purge, Archive, and Cost-Justify Storage**
+    Old or unused data adds storage cost and slows operations. Archive or delete intelligently.
+48. **Partition Inductive, Deductive, Batch, and User Interaction (OLTP) Workloads**
+    Separate workloads by type—batch vs. real-time vs. user interaction. Partitioning streamlines performance.
+49. **Design Your Application to Be Monitored**
+    Visibility is essential. Plan metrics, logs, and alerts from the start.
+50. **Be Competent**
+    Invest in knowledge and people—not just tools. Effective scale grows from skilled teams.
+
+---
+
